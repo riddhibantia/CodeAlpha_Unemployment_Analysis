@@ -1,51 +1,51 @@
-# CodeAlpha Data Science Internship - Task 2: Unemployment Analysis with Python
+# Unemployment Analysis with Python
 
-## 📌 Project Overview
-This project analyzes unemployment rate trends across Indian states and geographical zones using Python. Special focus is placed on assessing the economic impact of the **COVID-19 pandemic and national lockdown in 2020**, evaluating seasonal trends, and providing insights for economic policy.
+This project was built for the CodeAlpha Data Science Internship. It analyzes unemployment trends across Indian states with a focus on understanding the economic impact of the 2020 COVID-19 lockdown.
 
----
+## Dataset
+The dataset tracks monthly unemployment data across Indian states up to November 2020.
+Key columns include:
+- `State`: State/UT name
+- `Date`: Monthly observation date
+- `Unemployment_Rate`: Estimated unemployment rate (%)
+- `Employed`: Estimated employed population
+- `Labour_Participation_Rate`: Labour participation rate (%)
+- `Zone`: Region (North, South, East, West, North East)
 
-## 🛠️ Tech Stack & Libraries
-- **Language:** Python
-- **Data Preprocessing & Manipulation:** `pandas`, `numpy`
-- **Data Visualization:** `matplotlib`, `seaborn`
+## Analysis Highlights
+1. **Trend Analysis**: Studied how unemployment numbers changed before and during lockdown restrictions.
+2. **State Comparisons**: Compared states by average unemployment rate throughout 2020.
+3. **Regional Distribution**: Looked at variations across different geographic zones.
+4. **Correlation**: Checked relationships between unemployment, employment counts, and labor participation.
 
----
+## Observations
+- National average unemployment hovered around **9.76%** pre-lockdown and climbed to **18.75%** during the initial lockdown months, peaking in **May 2020 at 23.24%**.
+- Northern and Eastern states showed higher spikes compared to Southern and Western states.
+- Plots are saved in the `plots/` folder:
+  - `covid_impact_trend.png`: Monthly trend showing the lockdown spike.
+  - `statewise_unemployment.png`: States ranked by average unemployment.
+  - `zonewise_distribution.png`: Boxplot across geographic regions.
+  - `pre_vs_post_lockdown.png`: Before vs. during lockdown comparison.
+  - `correlation_heatmap.png`: Feature correlation matrix.
 
-## 🔬 Dataset Overview
-The dataset contains monthly economic observations across Indian states:
-- **`State`**: Indian states and Union Territories.
-- **`Date`**: Monthly observation dates (Jan 2020 – Oct 2020).
-- **`Unemployment_Rate`**: Percentage of unemployed individuals in the labor force.
-- **`Employed`**: Estimated count of actively employed people.
-- **`Labour_Participation_Rate`**: Percentage of working-age population active in the labor market.
-- **`Zone`**: Geographic regions (North, South, East, West, North East).
+## Project Structure
+```
+├── plots/
+│   ├── covid_impact_trend.png
+│   ├── statewise_unemployment.png
+│   ├── zonewise_distribution.png
+│   ├── pre_vs_post_lockdown.png
+│   └── correlation_heatmap.png
+├── unemployment_analysis.py
+├── Unemployment_Analysis.ipynb
+├── Unemployment_Rate_upto_11_2020.csv
+├── requirements.txt
+└── README.md
+```
 
----
-
-## 📊 Key Visualizations & Plots
-Saved in the [`plots/`](./plots) directory:
-1. **`covid_impact_trend.png`**: Monthly national unemployment trend showing the drastic spike following the March 2020 lockdown.
-2. **`statewise_unemployment.png`**: Ranking of Indian states by their average unemployment rate in 2020.
-3. **`zonewise_distribution.png`**: Boxplot showing distribution and regional disparities across geographic zones.
-4. **`pre_vs_post_lockdown.png`**: Side-by-side bar chart evaluating unemployment pre-lockdown (Jan-Mar) versus lockdown (Apr-Oct).
-5. **`correlation_heatmap.png`**: Correlation analysis among unemployment, employment numbers, and labor participation.
-
----
-
-## 💡 Key Economic Findings & Insights
-- **COVID-19 Impact:** Pre-lockdown unemployment averaged **~9.76%**, which surged to **18.75%** during peak lockdown restrictions, peaking at **23.24% in May 2020**.
-- **Most Impacted States:** Haryana (27.48%), Tripura (25.05%), Jharkhand (19.54%), Bihar (19.47%), Delhi (18.41%).
-- **Most Resilient States:** Meghalaya (3.87%), Assam (4.86%), Gujarat (6.38%), Odisha (6.46%).
-- **Policy Recommendations:** State-targeted employment stimulus programs, focus on urban informal sector protections, and regional diversification of industries.
-
----
-
-## 🚀 How to Run
+## How to Run
 ```bash
-# 1. Navigate to the task directory
-cd Task_2_Unemployment_Analysis
-
-# 2. Run the analysis script
+pip install -r requirements.txt
 python unemployment_analysis.py
 ```
+Or open `Unemployment_Analysis.ipynb` in Jupyter Notebook or Google Colab.
